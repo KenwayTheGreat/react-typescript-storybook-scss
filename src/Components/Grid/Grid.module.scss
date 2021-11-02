@@ -34,6 +34,22 @@ $breakpoints: ('sm': 600px,
     }
   }
 
+  @include breakpoint("md") {
+    @for $i from 1 to 13 {
+      &_md_#{$i} {
+        flex-basis: $i / 12 * 100%;
+      }
+    }
+  }
+
+  @include breakpoint("lg") {
+    @for $i from 1 to 13 {
+      &_lg_#{$i} {
+        flex-basis: $i / 12 * 100%;
+      }
+    }
+  }
+
   @each $name,
   $value in $spacing {
     &_spacing_#{$name} {
