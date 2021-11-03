@@ -24,7 +24,8 @@ const Grid: FunctionComponent<{
     [styles[`Grid_sm_${sm}`]]: sm,
     [styles[`Grid_md_${md}`]]: md,
     [styles[`Grid_cols_${lg}`]]: lg,
-    [styles[`Grid_spacing_${spacing}`]]: spacing
+    [styles[`Grid_spacing_${spacing}`]]: spacing,
+    [styles[`Grid_justifyContent_${justifyContent}`]]: justifyContent
   });
   return <div className={cn}>{children}</div>
 }
