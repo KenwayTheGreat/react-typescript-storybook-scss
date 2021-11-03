@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 type Spacing = 'sm' | 'md' | 'lg';
+type JustifyContent = "flex-start" | "center" | "flex-end" | "space-between";
 
 const Grid: FunctionComponent<{
   children: ReactNode,
@@ -13,8 +14,9 @@ const Grid: FunctionComponent<{
   sm?: Cols,
   md?: Cols,
   lg?: Cols,
-  spacing?: Spacing
-}> = ({ children, container, item, xs, sm, md, lg, spacing }) => {
+  spacing?: Spacing,
+  justifyContent?: JustifyContent,
+}> = ({ children, container, item, xs, sm, md, lg, spacing, justifyContent }) => {
   const cn = classNames({
     [styles.Grid_container]: container,
     [styles.Grid_item]: item,
